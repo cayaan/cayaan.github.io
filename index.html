@@ -1,46 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Ayaan | Personal Website</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ayaan Chaudhary | Personal Website</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      max-width: 800px;
-      margin: 50px auto;
-      padding: 20px;
-      background-color: #f9f9f9;
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f6f9;
       color: #333;
-    }
-    h1 {
-      color: #222;
-    }
-    p {
-      font-size: 18px;
       line-height: 1.6;
     }
-    .highlight {
-      background-color: #eef;
-      padding: 10px;
-      border-left: 4px solid #3366cc;
+
+    header {
+      background: #2c3e50;
+      color: white;
+      padding: 60px 20px 40px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.8em;
+      margin: 0;
+    }
+
+    header p {
+      font-size: 1.2em;
+      margin-top: 10px;
+    }
+
+    section {
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    h2 {
+      color: #2c3e50;
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 10px;
+    }
+
+    .card {
+      background: white;
+      padding: 25px;
       margin-top: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      background: #2c3e50;
+      color: white;
+    }
+
+    a {
+      color: #3498db;
+      text-decoration: none;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2em;
+      }
+
+      section {
+        padding: 30px 15px;
+      }
     }
   </style>
 </head>
 <body>
-  <h1>Hey! I'm Ayaan 👋</h1>
-  <p>
-    I’m a BMS student with a strong interest in <strong>business strategy, startups, and digital transformation</strong>. 
-    Passionate about marketing, finance, and solving real-world problems with smart, scalable solutions.
-  </p>
+  <header>
+    <h1>Hey! I'm Ayaan 👋</h1>
+    <p>BMS student | Business enthusiast | Future leader in the making</p>
+  </header>
 
-  <div class="highlight">
-    Currently building my personal brand and exploring opportunities in management, consulting, and entrepreneurship.
-  </div>
+  <section>
+    <h2>About Me</h2>
+    <div class="card">
+      <p>
+        I’m Ayaan Chaudhary, a driven BMS student with a deep interest in business strategy, marketing, and innovation.
+        I thrive in high-pressure environments, love taking initiative, and enjoy turning challenges into growth opportunities.
+        Whether it’s startups, branding, or leadership — I’m always learning, building, and improving.
+      </p>
+    </div>
+  </section>
 
-  <p>
-    This is my personal website. I’ll soon be adding my resume, blog, and contact page here. Stay tuned!
-  </p>
+  <section>
+    <h2>Education</h2>
+    <div class="card">
+      <p><strong>Bachelor of Management Studies (BMS)</strong><br/>
+      University of Delhi<br/>
+      Ongoing</p>
+
+      <p><strong>Class 12th</strong><br/>
+      Commerce with Mathematics | CBSE Board | 2024</p>
+
+      <p><strong>Class 10th</strong><br/>
+      CBSE Board | 2022</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Contact Me</h2>
+    <div class="card">
+      <p>Feel free to reach out to me for collaborations, internships, or just to chat!</p>
+      <p><strong>Email:</strong> <a href="mailto:ayaan15ch@gmail.com">ayaan15ch@gmail.com</a></p>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Ayaan Chaudhary | Built with ❤️ on GitHub Pages
+  </footer>
 </body>
 </html>
