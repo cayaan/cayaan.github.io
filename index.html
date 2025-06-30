@@ -1,229 +1,236 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ayaan Chaudhary | Personal Website</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <title>Ayaan Chaudhary | Consulting</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <style>
+    :root {
+      --bg: #001f3f;
+      --text: #ffffff;
+      --accent: #007bff;
+    }
+
     html {
       scroll-behavior: smooth;
     }
-    :root {
-      --bg: #f4f6f9;
-      --txt: #333;
-      --card: #fff;
-      --hdr: #2c3e50;
-    }
-    [data-theme="dark"] {
-      --bg: #1a1a1a;
-      --txt: #eee;
-      --card: #2c2c2c;
-      --hdr: #111;
-    }
+
     body {
       margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: var(--bg);
-      color: var(--txt);
-      line-height: 1.6;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      transition: background 0.3s ease, color 0.3s ease;
     }
+
+    header {
+      padding: 3rem 2rem 2rem;
+      background: linear-gradient(to bottom, #0052a3, #001f3f);
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 3.5rem;
+      margin: 0;
+      font-family: 'Georgia', serif;
+    }
+
+    header h2 {
+      font-size: 1.6rem;
+      font-weight: 300;
+      color: #cdd6f4;
+    }
+
     nav {
-      background: var(--hdr);
-      position: fixed;
-      width: 100%;
-      top: 0;
-      left: 0;
-      padding: 10px 20px;
       display: flex;
-      justify-content: space-between;
-      align-items: center;
-      z-index: 1000;
+      justify-content: center;
+      gap: 2rem;
+      padding: 1rem;
+      background-color: #002a4f;
+      position: sticky;
+      top: 0;
+      z-index: 10;
     }
+
     nav a {
-      color: white;
-      margin: 0 10px;
       text-decoration: none;
-      font-size: 0.95em;
+      color: var(--text);
+      transition: color 0.2s;
     }
-    nav a.active {
-      border-bottom: 2px solid #fff;
+
+    nav a:hover {
+      color: var(--accent);
     }
-    #theme-toggle {
-      cursor: pointer;
-      color: white;
-      font-size: 1.2em;
-    }
+
     section {
-      padding: 80px 20px 40px;
+      padding: 4rem 2rem;
       max-width: 900px;
       margin: auto;
-      opacity: 0;
-      transform: translateY(20px);
-      transition: all 0.6s ease;
     }
-    section.visible {
-      opacity: 1;
-      transform: translateY(0);
+
+    h3 {
+      font-size: 2rem;
+      border-bottom: 2px solid var(--accent);
+      padding-bottom: 0.5rem;
+      margin-bottom: 2rem;
     }
-    .card {
-      background: var(--card);
-      padding: 25px;
-      margin-top: 20px;
-      border-radius: 8px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-      transition: background-color 0.3s;
+
+    .education-entry, .skill-entry {
+      margin-bottom: 2rem;
     }
-    .card:hover {
-      background-color: #e0e4ea;
+
+    .skill-entry i {
+      color: var(--accent);
+      margin-right: 0.5rem;
     }
-    footer {
-      text-align: center;
-      padding: 30px;
-      background: var(--hdr);
-      color: white;
+
+    .hoverbox {
+      background-color: #003366;
+      padding: 1rem;
+      border-radius: 10px;
+      transition: background-color 0.3s ease;
     }
-    .social-icons a {
-      color: white;
-      margin: 0 10px;
-      font-size: 22px;
-      transition: color 0.3s;
+
+    .hoverbox:hover {
+      background-color: #004080;
     }
-    .social-icons a:hover {
-      color: #3498db;
+
+    .contact-icons {
+      display: flex;
+      gap: 1.5rem;
+      font-size: 1.6rem;
+      justify-content: center;
+      margin-top: 1rem;
     }
-    input, textarea {
+
+    .contact-icons a {
+      color: var(--text);
+      transition: transform 0.2s ease;
+    }
+
+    .contact-icons a:hover {
+      transform: scale(1.2);
+      color: var(--accent);
+    }
+
+    form input, form textarea {
       width: 100%;
-      padding: 10px;
-      margin: 8px 0;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      transition: background-color 0.3s;
-    }
-    input:hover, textarea:hover {
-      background-color: #eaeff5;
-    }
-    input:focus, textarea:focus {
-      background-color: #fff;
-    }
-    button {
-      background: var(--hdr);
-      color: white;
+      padding: 1rem;
+      margin: 1rem 0;
       border: none;
-      padding: 10px 20px;
-      cursor: pointer;
-      border-radius: 4px;
-      font-size: 1em;
+      border-radius: 5px;
     }
-    button:hover {
-      background: #1a2a40;
+
+    form button {
+      background-color: var(--accent);
+      color: white;
+      padding: 1rem 2rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .btn-center {
+      text-align: center;
+      margin-top: 2rem;
+    }
+
+    .btn-center a {
+      background-color: var(--accent);
+      padding: 1rem 2rem;
+      border-radius: 5px;
+      text-decoration: none;
+      color: white;
     }
   </style>
 </head>
-<body>
 
-<nav>
-  <div>
+<body>
+  <header>
+    <h1>Ayaan Chaudhary</h1>
+    <h2>Consulting</h2>
+  </header>
+
+  <nav>
     <a href="#about">About</a>
     <a href="#education">Education</a>
     <a href="#skills">Skills</a>
     <a href="#contact">Contact</a>
-  </div>
-  <i id="theme-toggle" class="fas fa-moon"></i>
-</nav>
+  </nav>
 
-<section id="about">
-  <h2>About Me</h2>
-  <div class="card">
-    <p>Hey! I’m Ayaan Chaudhary, a passionate BMS (Bachelor of Management Studies) student at the University of Delhi, with a deep interest in business, strategy, and global trends. From being selected for the prestigious HPAIR Conference at Harvard to engaging deeply with international affairs, I believe in combining academics with real-world impact.</p>
-    <p>I’m someone who thrives in intellectually challenging environments, loves building things from scratch, and enjoys learning from the best minds across disciplines. My goal? To build a global career rooted in purpose, influence, and innovation.</p>
-  </div>
-</section>
+  <section id="about">
+    <h3>About Me</h3>
+    <div class="hoverbox">
+      <p>I’m Ayaan Chaudhary, a BMS student at the University of Delhi with a strong passion for consulting, business dynamics, and global economic trends. With adaptability as a core strength, I approach challenges analytically and creatively. I'm also enthusiastic about collaborating with professionals and exploring new frontiers in problem-solving and leadership.</p>
+    </div>
+  </section>
 
-<section id="education">
-  <h2>Education</h2>
-  <div class="card">
-    <p><strong>Bachelor of Management Studies (BMS)</strong><br>University of Delhi (2025 – 2028)</p>
-    <p><strong>Class 12th</strong><br>St. Paul’s School, Hauz Khas (CBSE) – 2024</p>
-    <p><strong>Class 10th</strong><br>St. Paul’s School, Hauz Khas (CBSE) – 2022</p>
-  </div>
-</section>
+  <section id="education">
+    <h3>Education</h3>
+    <div class="education-entry hoverbox">
+      <strong>2025 – 2028</strong><br />
+      Bachelor of Management Studies (BMS)<br />
+      University of Delhi
+    </div>
+    <div class="education-entry hoverbox">
+      <strong>2024</strong><br />
+      Class 12 (CBSE) – St. Paul’s School, Hauz Khas
+    </div>
+    <div class="education-entry hoverbox">
+      <strong>2022</strong><br />
+      Class 10 (CBSE) – St. Paul’s School, Hauz Khas
+    </div>
+  </section>
 
-<section id="skills">
-  <h2>Skills</h2>
-  <div class="card">
-    <p><i class="fas fa-calculator" style="color:#004080;"></i> <strong>Quantitative Aptitude:</strong> Strong analytical thinker with a love for numbers, statistics, and solving data-driven challenges under time pressure.</p>
-    <p><i class="fas fa-users-cog" style="color:#004080;"></i> <strong>Team Problem Solving:</strong> Collaborative problem solver experienced in handling group dynamics, brainstorming solutions, and delivering results.</p>
-    <p><i class="fas fa-user-tie" style="color:#004080;"></i> <strong>Group Leadership:</strong> Passionate about leading peers in academic, club, and real-world settings, always ready to guide, inspire, and take ownership.</p>
-    <p><i class="fas fa-globe" style="color:#004080;"></i> <strong>International Relations:</strong> Selected for Harvard’s HPAIR Conference 2026; tracks diplomacy, geopolitics, and evolving global narratives.</p>
-    <p><i class="fas fa-chart-line" style="color:#004080;"></i> <strong>Business Trends:</strong> Continuously researching emerging startups, innovative models, market disruptions, and unicorn journeys.</p>
-    <p><i class="fas fa-search" style="color:#004080;"></i> <strong>SEO (Search Engine Optimization):</strong> Comfortable with keyword strategy, on-page SEO, and content structures to optimize organic growth.</p>
-    <p><i class="fas fa-sync-alt" style="color:#004080;"></i> <strong>Adaptability:</strong> Will accomplish anything even without prior knowledge. Google and ChatGPT are my closest allies when solving new problems.</p>
-    
-  </div>
-</section>
+  <section id="skills">
+    <h3>Skills</h3>
+    <div class="hoverbox skill-entry">
+      <i class="fas fa-chart-line"></i> Quantitative Aptitude – Adept in solving complex numerical and analytical problems with high accuracy and speed.
+    </div>
+    <div class="hoverbox skill-entry">
+      <i class="fas fa-users-cog"></i> Team Problem Solving – Collaborative mindset for resolving group challenges and contributing innovative solutions.
+    </div>
+    <div class="hoverbox skill-entry">
+      <i class="fas fa-user-tie"></i> Group Leadership – Natural leader with experience in directing teams toward clear, shared goals.
+    </div>
+    <div class="hoverbox skill-entry">
+      <i class="fas fa-globe-asia"></i> International Relations – Selected for HPAIR, Harvard’s international forum. Attending HCONF 2026 in the USA.
+    </div>
+    <div class="hoverbox skill-entry">
+      <i class="fas fa-chart-pie"></i> Business Trends – Proficient at spotting, analysing, and leveraging market and industry shifts for strategic advantage.
+    </div>
+    <div class="hoverbox skill-entry">
+      <i class="fas fa-search"></i> SEO – Experienced in optimising content for search engine visibility, rankings, and digital outreach.
+    </div>
+    <div class="hoverbox skill-entry">
+      <i class="fas fa-sync-alt"></i> Adaptability – Will accomplish anything without prior info too. Google and ChatGPT are my best friends.
+    </div>
+  </section>
 
-<section id="contact">
-  <h2>Contact Me</h2>
-  <div class="card">
+  <section id="contact">
+    <h3>Contact Me</h3>
     <form action="https://formspree.io/f/xzzgopel" method="POST">
-      <input type="text" name="name" placeholder="Your name" required />
-      <input type="email" name="_replyto" placeholder="Your email" required />
-      <textarea name="message" rows="5" placeholder="Your message..." required></textarea>
-      <button type="submit">Send Message</button>
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <div class="btn-center">
+        <button type="submit">Send Message</button>
+      </div>
     </form>
-  </div>
-</section>
+    <div class="contact-icons">
+      <a href="https://www.linkedin.com/in/ayaan-chaudhary-972ba5281" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="mailto:ayaan15ch@gmail.com"><i class="fas fa-envelope"></i></a>
+      <a href="https://wa.me/9315087976" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    </div>
+  </section>
 
-<footer>
-  <div class="social-icons">
-    <a href="https://www.linkedin.com/in/ayaan-chaudhary-972ba5281" target="_blank"><i class="fab fa-linkedin"></i></a>
-    <a href="https://wa.me/919315087976" target="_blank"><i class="fab fa-whatsapp"></i></a>
-    <a href="mailto:ayaan15ch@gmail.com"><i class="fas fa-envelope"></i></a>
-  </div>
-  <p>&copy; 2025 Ayaan Chaudhary | All rights reserved by Indian Copyright Laws </p>
-</footer>
-
-<script>
-  const themeToggle = document.getElementById('theme-toggle');
-  themeToggle.addEventListener('click', () => {
-    document.documentElement.toggleAttribute('data-theme');
-    themeToggle.classList.toggle('fa-sun');
-    themeToggle.classList.toggle('fa-moon');
-  });
-
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-      }
-    });
-  }, {
-    threshold: 0.1
-  });
-
-  document.querySelectorAll('section').forEach(section => {
-    observer.observe(section);
-  });
-
-  const navLinks = document.querySelectorAll('nav a');
-  window.addEventListener('scroll', () => {
-    let current = '';
-    document.querySelectorAll('section').forEach(section => {
-      const sectionTop = section.offsetTop - 90;
-      if (pageYOffset >= sectionTop) {
-        current = section.getAttribute('id');
-      }
-    });
-    navLinks.forEach(link => {
-      link.classList.remove('active');
-      if (link.getAttribute('href') === `#${current}`) {
-        link.classList.add('active');
-      }
-    });
-  });
-</script>
+  <section class="btn-center">
+    <a href="#contact">Let's Work Together</a>
+  </section>
 
 </body>
+
 </html>
 
