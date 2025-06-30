@@ -31,12 +31,14 @@
     .hero-title {
       font-size: 2.8rem;
       font-weight: 700;
+      animation: slideInDown 1s ease-out;
     }
 
     .hero-sub {
       font-size: 1.3rem;
       color: #0077b6;
       margin-top: 0.5rem;
+      animation: slideInUp 1.2s ease-out;
     }
 
     nav {
@@ -198,20 +200,29 @@
       border-top: 1px solid #eaeaea;
     }
 
-    @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+    .toast {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background-color: #0077b6;
+      color: #fff;
+      padding: 1rem 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      opacity: 0;
+      transition: opacity 0.5s ease;
+      z-index: 9999;
+    }
+
+    .toast.show {
+      opacity: 1;
     }
   </style>
 </head>
 
 <body>
+  <div id="toast" class="toast">Welcome to the official website of Ayaan Chaudhary 🚀</div>
+
   <header>
     <h1 class="hero-title">Ayaan Chaudhary</h1>
     <p class="hero-sub">Consulting Enthusiast</p>
@@ -226,7 +237,7 @@
 
   <section id="about">
     <h2>About Me</h2>
-    <p>I’m a BMS (Bachelor of Management Studies) student at Delhi University with a deep-rooted interest in consulting, strategy, and international affairs. I believe in solving complex challenges with structured thinking and global insight. Selected for HPAIR at Harvard 2026, I blend academics, leadership, and a hunger to solve problems into impactful work.</p>
+    <p>I’m a BMS student at Delhi University with a deep interest in consulting, international business, and analytics. My mindset is entrepreneurial, adaptable, and laser-focused on strategy and impact. Selected for HPAIR 2026, I aim to lead projects that create real-world transformation through sharp business acumen and collaborative vision.</p>
     <div class="social-icons">
       <a href="https://www.linkedin.com/in/ayaan-chaudhary-972ba5281" target="_blank"><i class="fab fa-linkedin"></i></a>
       <a href="https://wa.me/9315087976" target="_blank"><i class="fab fa-whatsapp"></i></a>
@@ -238,11 +249,11 @@
     <h2>Education</h2>
     <div class="education-entry">
       <h3>Bachelor of Management Studies (BMS)</h3>
-      <span>Delhi University | 2025 – 2028</span>
+      <span>Delhi University | 2025–2028</span>
     </div>
     <div class="education-entry">
-      <h3>Class 12th (CBSE) – Commerce + Mathematics</h3>
-      <span>St. Paul’s School, Hauz Khas | 2024</span>
+      <h3>Class 12th (CBSE)</h3>
+      <span>St. Paul’s School, Hauz Khas | 2024 | Commerce + Math</span>
     </div>
     <div class="education-entry">
       <h3>Class 10th (CBSE)</h3>
@@ -253,62 +264,44 @@
   <section id="skills">
     <h2>Skills</h2>
     <div class="skills-grid">
-      <div class="skill-card">
-        <i class="fas fa-brain"></i>
-        <h3>Adaptability</h3>
-        <p>Can learn and deliver on any topic—even with no prior exposure—using fast research, logic, and resourcefulness.</p>
-      </div>
-      <div class="skill-card">
-        <i class="fas fa-chart-line"></i>
-        <h3>Business Trends</h3>
-        <p>In touch with changing market landscapes, startup ecosystems, and breakthrough strategies.</p>
-      </div>
-      <div class="skill-card">
-        <i class="fas fa-globe"></i>
-        <h3>International Relations</h3>
-        <p>Harvard HPAIR 2026 selectee with cross-cultural communication and policy experience.</p>
-      </div>
-      <div class="skill-card">
-        <i class="fas fa-magnifying-glass-chart"></i>
-        <h3>SEO</h3>
-        <p>Proficient in search engine ranking tactics, web traffic tools, and digital marketing strategy.</p>
-      </div>
-      <div class="skill-card">
-        <i class="fas fa-calculator"></i>
-        <h3>Quantitative Aptitude</h3>
-        <p>Excelled in competitive quant reasoning; comfortable with numbers, logic, and data-driven thinking.</p>
-      </div>
-      <div class="skill-card">
-        <i class="fas fa-users"></i>
-        <h3>Team Problem Solving</h3>
-        <p>Knows how to energize, unify and execute projects within multi-stakeholder groups.</p>
-      </div>
+      <div class="skill-card"><i class="fas fa-calculator"></i><p><strong>Quantitative Aptitude</strong><br>Rigorous prep has shaped a solid grip over numbers and time-based problem solving.</p></div>
+      <div class="skill-card"><i class="fas fa-users"></i><p><strong>Team Problem Solving</strong><br>Well-versed in real-time brainstorming, adaptability, and resolving group challenges.</p></div>
+      <div class="skill-card"><i class="fas fa-user-tie"></i><p><strong>Group Leadership</strong><br>Proven leadership in student-run projects and organizing national-level competitions.</p></div>
+      <div class="skill-card"><i class="fas fa-globe"></i><p><strong>International Relations</strong><br>Selected for HPAIR 2026; passionate about geopolitics, diplomacy, and public policy.</p></div>
+      <div class="skill-card"><i class="fas fa-chart-line"></i><p><strong>Business Trends</strong><br>Track industry shifts and innovation curves to guide decision-making processes.</p></div>
+      <div class="skill-card"><i class="fas fa-magnifying-glass-chart"></i><p><strong>SEO</strong><br>Skilled in driving digital engagement through advanced SEO strategies and content management.</p></div>
+      <div class="skill-card"><i class="fas fa-brain"></i><p><strong>Adaptability</strong><br>Can take on new challenges with zero prior info. Google + ChatGPT = my toolset.</p></div>
     </div>
   </section>
 
   <section id="contact">
-    <h2>Let’s Work Together</h2>
     <div class="btn-wrapper">
-      <button class="reveal-btn" onclick="document.getElementById('formbox').style.display='block'; document.getElementById('formbox').scrollIntoView({ behavior: 'smooth' });">Contact Me</button>
+      <button class="reveal-btn" onclick="document.getElementById('form-section').style.display='block'; document.getElementById('form-section').scrollIntoView({ behavior: 'smooth' });">Let’s Work Together</button>
     </div>
-    <div id="formbox" class="contact-form">
+    <div class="contact-form" id="form-section">
       <form action="https://formspree.io/f/xzzgopel" method="POST">
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="email" placeholder="Your Email" required>
-        <textarea name="message" rows="4" placeholder="Your Message"></textarea>
+        <input type="text" name="name" placeholder="Your Name" required><br>
+        <input type="email" name="email" placeholder="Your Email" required><br>
+        <textarea name="message" rows="4" placeholder="Your Message"></textarea><br>
         <button type="submit">Send</button>
       </form>
     </div>
   </section>
 
   <footer>
-    &copy; Ayaan Chaudhary 2025 | All rights reserved under Indian Copyright Laws
+    &copy; Ayaan Chaudhary 2025 | All rights reserved by Indian Copyright Laws
   </footer>
 
+  <script>
+    window.onload = function () {
+      const toast = document.getElementById("toast");
+      toast.classList.add("show");
+      setTimeout(() => toast.classList.remove("show"), 5000);
+    };
+  </script>
 </body>
 
 </html>
-
 
 
 
