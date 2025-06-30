@@ -29,12 +29,12 @@
     }
 
     .hero-title {
-      font-size: 2.5rem;
-      font-weight: 800;
+      font-size: 2.8rem;
+      font-weight: 700;
     }
 
     .hero-sub {
-      font-size: 1.2rem;
+      font-size: 1.3rem;
       color: #0077b6;
       margin-top: 0.5rem;
     }
@@ -67,6 +67,7 @@
       max-width: 1000px;
       margin: auto;
       padding: 3rem 2rem;
+      animation: fadeInUp 1s ease;
     }
 
     h2 {
@@ -110,11 +111,12 @@
       border-radius: 10px;
       padding: 1.5rem;
       box-shadow: 0 0 10px rgba(0,0,0,0.05);
-      transition: transform 0.3s;
+      transition: transform 0.3s, background 0.3s;
     }
 
     .skill-card:hover {
       transform: translateY(-5px);
+      background: #f0f8ff;
     }
 
     .skill-card i {
@@ -143,6 +145,50 @@
       font-size: 0.95rem;
     }
 
+    .btn-wrapper {
+      text-align: center;
+      margin-top: 2rem;
+    }
+
+    .reveal-btn {
+      padding: 1rem 2rem;
+      font-size: 1.1rem;
+      background: #0077b6;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+
+    .reveal-btn:hover {
+      transform: scale(1.05);
+    }
+
+    .contact-form {
+      display: none;
+      margin-top: 2rem;
+      animation: fadeInUp 0.7s ease;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 0.8rem;
+      margin-bottom: 1rem;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+
+    .contact-form button {
+      padding: 0.8rem 1.5rem;
+      background: #0077b6;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
     footer {
       text-align: center;
       padding: 2rem;
@@ -150,6 +196,17 @@
       font-size: 0.9rem;
       color: #777;
       border-top: 1px solid #eaeaea;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
   </style>
 </head>
@@ -169,7 +226,7 @@
 
   <section id="about">
     <h2>About Me</h2>
-    <p>I am a BMS (Bachelor of Management Studies) student at Delhi University, deeply passionate about consulting, strategic analysis, and international affairs. I thrive in high-stakes environments and pride myself on solving problems with sharp insight, minimal fluff, and an always-learning mindset. I’ve been selected for HPAIR at Harvard in 2026, and actively follow global economic trends and cross-cultural dialogue. I believe the right strategy can change everything.</p>
+    <p>I’m a BMS (Bachelor of Management Studies) student at Delhi University with a deep-rooted interest in consulting, strategy, and international affairs. I believe in solving complex challenges with structured thinking and global insight. Selected for HPAIR at Harvard 2026, I blend academics, leadership, and a hunger to solve problems into impactful work.</p>
     <div class="social-icons">
       <a href="https://www.linkedin.com/in/ayaan-chaudhary-972ba5281" target="_blank"><i class="fab fa-linkedin"></i></a>
       <a href="https://wa.me/9315087976" target="_blank"><i class="fab fa-whatsapp"></i></a>
@@ -199,49 +256,58 @@
       <div class="skill-card">
         <i class="fas fa-brain"></i>
         <h3>Adaptability</h3>
-        <p>Can work on anything—even without prior experience—by relying on my resourcefulness, speed, and tools like ChatGPT and Google.</p>
+        <p>Can learn and deliver on any topic—even with no prior exposure—using fast research, logic, and resourcefulness.</p>
       </div>
       <div class="skill-card">
         <i class="fas fa-chart-line"></i>
         <h3>Business Trends</h3>
-        <p>Stay sharp with global economic insights, startups, and innovation, always adapting to future-ready knowledge.</p>
+        <p>In touch with changing market landscapes, startup ecosystems, and breakthrough strategies.</p>
       </div>
       <div class="skill-card">
         <i class="fas fa-globe"></i>
         <h3>International Relations</h3>
-        <p>Harvard HPAIR 2026 participant with strong interest in diplomacy, international trade, and multilateral engagement.</p>
+        <p>Harvard HPAIR 2026 selectee with cross-cultural communication and policy experience.</p>
       </div>
       <div class="skill-card">
         <i class="fas fa-magnifying-glass-chart"></i>
         <h3>SEO</h3>
-        <p>Skilled in boosting digital presence using on-page and off-page optimization strategies for search visibility.</p>
+        <p>Proficient in search engine ranking tactics, web traffic tools, and digital marketing strategy.</p>
       </div>
       <div class="skill-card">
         <i class="fas fa-calculator"></i>
         <h3>Quantitative Aptitude</h3>
-        <p>Comfortable with numbers, data sets, and mathematical logic—built over time through problem-solving and practice.</p>
+        <p>Excelled in competitive quant reasoning; comfortable with numbers, logic, and data-driven thinking.</p>
       </div>
       <div class="skill-card">
         <i class="fas fa-users"></i>
         <h3>Team Problem Solving</h3>
-        <p>Have worked across teams to solve business problems, ensuring collaboration, clarity, and creativity.</p>
+        <p>Knows how to energize, unify and execute projects within multi-stakeholder groups.</p>
       </div>
     </div>
   </section>
 
   <section id="contact">
     <h2>Let’s Work Together</h2>
-    <p style="text-align:center;">Feel free to connect for consulting projects, collaborations, or growth opportunities.</p>
-    <div class="social-icons">
-      <a href="mailto:ayaan15ch@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+    <div class="btn-wrapper">
+      <button class="reveal-btn" onclick="document.getElementById('formbox').style.display='block'; document.getElementById('formbox').scrollIntoView({ behavior: 'smooth' });">Contact Me</button>
+    </div>
+    <div id="formbox" class="contact-form">
+      <form action="https://formspree.io/f/xzzgopel" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" rows="4" placeholder="Your Message"></textarea>
+        <button type="submit">Send</button>
+      </form>
     </div>
   </section>
 
   <footer>
     &copy; Ayaan Chaudhary 2025 | All rights reserved under Indian Copyright Laws
   </footer>
+
 </body>
 
 </html>
+
 
 
