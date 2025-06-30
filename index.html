@@ -2,11 +2,11 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ayaan Chaudhary – Consulting</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <style>
     * {
       margin: 0;
@@ -38,10 +38,9 @@
 
     .tag {
       font-size: 3rem;
-      font-weight: 300;
-      margin-top: -1rem;
-      color: #fff;
-      opacity: 0.8;
+      font-weight: 600;
+      color: #00d4ff;
+      margin-top: 0.5rem;
     }
 
     nav {
@@ -68,29 +67,15 @@
 
     section {
       padding: 4rem 2rem;
-      max-width: 1000px;
+      max-width: 800px;
       margin: auto;
-    }
-
-    .about {
-      display: flex;
-      justify-content: space-between;
-      gap: 2rem;
-      flex-wrap: wrap;
-    }
-
-    .about-left {
-      flex: 1;
-    }
-
-    .about-left h2 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
     }
 
     .social-icons {
       display: flex;
+      justify-content: center;
       gap: 1rem;
+      margin-top: 1rem;
     }
 
     .social-icons a {
@@ -103,14 +88,11 @@
       transform: scale(1.2);
     }
 
-    .about-right {
-      flex: 2;
-    }
-
     .skills {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 2rem;
+      margin-top: 2rem;
     }
 
     .skill {
@@ -157,6 +139,26 @@
       margin-top: 2rem;
     }
 
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 0.8rem;
+      margin-bottom: 1rem;
+      border-radius: 6px;
+      border: none;
+      outline: none;
+    }
+
+    .contact-form button {
+      padding: 0.8rem 1.5rem;
+      background: #00d4ff;
+      color: black;
+      font-weight: bold;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
     footer {
       text-align: center;
       padding: 1rem;
@@ -180,18 +182,13 @@
     <a href="#contact">Contact</a>
   </nav>
 
-  <section id="about" class="about">
-    <div class="about-left">
-      <h2>About Me</h2>
-      <p>Find me on:</p>
-      <div class="social-icons">
-        <a href="https://www.linkedin.com/in/ayaan-chaudhary-972ba5281" target="_blank"><i class="fab fa-linkedin"></i></a>
-        <a href="https://wa.me/9315087976" target="_blank"><i class="fab fa-whatsapp"></i></a>
-        <a href="mailto:ayaan15ch@gmail.com"><i class="fas fa-envelope"></i></a>
-      </div>
-    </div>
-    <div class="about-right">
-      <p>I’m a BMS student at Delhi University with a deep-rooted interest in consulting and business analytics. With a sharp eye for emerging global trends and an analytical mindset, I navigate business problems with strategic clarity. I believe in taking bold initiatives and working in collaborative, high-performance environments to solve real-world problems.</p>
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I’m a BMS student at Delhi University with a deep-rooted interest in consulting and business analytics. With a sharp eye for emerging global trends and an analytical mindset, I navigate business problems with strategic clarity. I believe in taking bold initiatives and working in collaborative, high-performance environments to solve real-world problems.</p>
+    <div class="social-icons">
+      <a href="https://www.linkedin.com/in/ayaan-chaudhary-972ba5281" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://wa.me/9315087976" target="_blank"><i class="fab fa-whatsapp"></i></a>
+      <a href="mailto:ayaan15ch@gmail.com"><i class="fas fa-envelope"></i></a>
     </div>
   </section>
 
@@ -224,7 +221,7 @@
         <p><strong>SEO</strong><br>Hands-on experience with search optimization tools to increase reach and traffic across web platforms.</p>
       </div>
       <div class="skill"><i class="fas fa-brain"></i>
-        <p><strong>Adaptability</strong><br>Will accomplish anything without prior info too. Google and ChatGPT are my best friends:)</p>
+        <p><strong>Adaptability</strong><br>Will accomplish anything without prior info too. Google and ChatGPT are my best friends.</p>
       </div>
     </div>
   </section>
@@ -235,9 +232,9 @@
     </div>
     <div class="contact-form" id="formbox">
       <form action="https://formspree.io/f/xzzgopel" method="POST">
-        <input type="text" name="name" placeholder="Your Name" required><br><br>
-        <input type="email" name="email" placeholder="Your Email" required><br><br>
-        <textarea name="message" rows="4" placeholder="Your Message"></textarea><br><br>
+        <input type="text" name="name" placeholder="Your Name" required><br>
+        <input type="email" name="email" placeholder="Your Email" required><br>
+        <textarea name="message" rows="4" placeholder="Your Message"></textarea><br>
         <button type="submit">Send</button>
       </form>
     </div>
@@ -247,7 +244,6 @@
     &copy; Ayaan Chaudhary 2025 | All rights reserved by Indian Copyright Laws
   </footer>
 </body>
-
 </html>
 
 
