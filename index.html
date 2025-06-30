@@ -4,187 +4,156 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ayaan Chaudhary – Consulting</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+  <title>Ayaan Chaudhary – Consulting Enthusiast</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <style>
     * {
       margin: 0;
       padding: 0;
-      scroll-behavior: smooth;
       box-sizing: border-box;
-      font-family: 'Poppins', sans-serif;
+      font-family: 'Inter', sans-serif;
+      scroll-behavior: smooth;
     }
 
     body {
-      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
-      color: #fff;
+      background-color: #f8f9fa;
+      color: #222;
     }
 
     header {
-      height: 100vh;
+      min-height: 100vh;
       display: flex;
       flex-direction: column;
-      align-items: center;
       justify-content: center;
+      align-items: center;
       text-align: center;
-      background: url('https://images.unsplash.com/photo-1557683304-673a23048d34') no-repeat center center/cover;
+      padding: 2rem;
+      background: white;
     }
 
-    .name {
-      font-size: 5rem;
-      font-weight: 600;
-    }
-
-    .tag {
+    .hero-title {
       font-size: 3rem;
-      font-weight: 600;
-      color: #00d4ff;
+      font-weight: 700;
+    }
+
+    .hero-sub {
+      font-size: 1.5rem;
+      color: #0077b6;
       margin-top: 0.5rem;
     }
 
     nav {
       display: flex;
       justify-content: center;
-      gap: 3rem;
-      background-color: #111;
-      padding: 1rem;
+      gap: 2rem;
+      padding: 1rem 0;
+      background-color: #ffffff;
       position: sticky;
       top: 0;
       z-index: 10;
+      border-bottom: 1px solid #eee;
     }
 
     nav a {
-      color: white;
       text-decoration: none;
-      font-weight: 600;
-      transition: color 0.3s ease;
+      color: #333;
+      font-weight: 500;
+      transition: color 0.3s;
     }
 
     nav a:hover {
-      color: #00d4ff;
+      color: #0077b6;
     }
 
     section {
-      padding: 4rem 2rem;
-      max-width: 800px;
-      margin: auto;
+      max-width: 900px;
+      margin: 4rem auto;
+      padding: 0 1.5rem;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      border-left: 4px solid #0077b6;
+      padding-left: 0.5rem;
+    }
+
+    .about p {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      color: #444;
     }
 
     .social-icons {
       display: flex;
       justify-content: center;
-      gap: 1rem;
+      gap: 1.5rem;
       margin-top: 1rem;
     }
 
     .social-icons a {
-      color: white;
-      font-size: 1.8rem;
-      transition: transform 0.2s;
+      font-size: 1.5rem;
+      color: #222;
+      transition: color 0.3s;
     }
 
     .social-icons a:hover {
-      transform: scale(1.2);
+      color: #0077b6;
     }
 
-    .skills {
+    .skills-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 2rem;
       margin-top: 2rem;
     }
 
-    .skill {
-      background: #1e2a38;
-      padding: 1rem;
-      border-radius: 12px;
-      transition: background 0.3s;
+    .skill-card {
+      background: #fff;
+      border: 1px solid #e0e0e0;
+      border-radius: 10px;
+      padding: 1.5rem;
+      transition: all 0.3s;
     }
 
-    .skill:hover {
-      background: #2e3a4f;
+    .skill-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05);
     }
 
-    .skill i {
-      font-size: 1.5rem;
+    .skill-card i {
+      font-size: 1.8rem;
+      color: #0077b6;
       margin-bottom: 0.5rem;
-      color: #00d4ff;
-    }
-
-    .contact-btn {
-      display: flex;
-      justify-content: center;
-      margin-top: 3rem;
-    }
-
-    .contact-btn button {
-      padding: 1rem 2rem;
-      border: none;
-      background: #00d4ff;
-      color: black;
-      font-weight: 700;
-      font-size: 1.1rem;
-      cursor: pointer;
-      border-radius: 8px;
-      transition: transform 0.3s;
-    }
-
-    .contact-btn button:hover {
-      transform: scale(1.05);
-    }
-
-    .contact-form {
-      display: none;
-      margin-top: 2rem;
-    }
-
-    .contact-form input,
-    .contact-form textarea {
-      width: 100%;
-      padding: 0.8rem;
-      margin-bottom: 1rem;
-      border-radius: 6px;
-      border: none;
-      outline: none;
-    }
-
-    .contact-form button {
-      padding: 0.8rem 1.5rem;
-      background: #00d4ff;
-      color: black;
-      font-weight: bold;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
     }
 
     footer {
       text-align: center;
-      padding: 1rem;
+      padding: 2rem;
+      background: #fff;
       font-size: 0.9rem;
-      background-color: #111;
-      margin-top: 3rem;
+      color: #666;
+      border-top: 1px solid #eee;
     }
   </style>
 </head>
 
 <body>
   <header>
-    <h1 class="name">Ayaan Chaudhary</h1>
-    <p class="tag">Consulting</p>
+    <h1 class="hero-title">Ayaan Chaudhary</h1>
+    <p class="hero-sub">Consulting Enthusiast</p>
   </header>
 
   <nav>
-    <a href="#about">About Me</a>
-    <a href="#education">Education</a>
+    <a href="#about">About</a>
     <a href="#skills">Skills</a>
     <a href="#contact">Contact</a>
   </nav>
 
-  <section id="about">
+  <section id="about" class="about">
     <h2>About Me</h2>
-    <p>I’m a BMS student at Delhi University with a deep-rooted interest in consulting and business analytics. With a sharp eye for emerging global trends and an analytical mindset, I navigate business problems with strategic clarity. I believe in taking bold initiatives and working in collaborative, high-performance environments to solve real-world problems.</p>
+    <p>I am a BMS (Bachelor of Management Studies) student at Delhi University, passionate about business strategy and global consulting. With a sharp focus on analytical thinking and trend forecasting, I aim to create real impact in strategic decision-making roles. I believe in solving high-stake problems with minimal noise and maximum clarity.</p>
     <div class="social-icons">
       <a href="https://www.linkedin.com/in/ayaan-chaudhary-972ba5281" target="_blank"><i class="fab fa-linkedin"></i></a>
       <a href="https://wa.me/9315087976" target="_blank"><i class="fab fa-whatsapp"></i></a>
@@ -192,59 +161,57 @@
     </div>
   </section>
 
-  <section id="education">
-    <h2>Education</h2>
-    <p><strong>Bachelor of Management Studies (BMS)</strong><br>Delhi University | 2025 – 2028</p>
-    <p><strong>Class 12 (CBSE)</strong><br>St. Paul’s School, Hauz Khas | 2024 | Commerce + Math</p>
-    <p><strong>Class 10 (CBSE)</strong><br>St. Paul’s School, Hauz Khas | 2022</p>
-  </section>
-
   <section id="skills">
     <h2>Skills</h2>
-    <div class="skills">
-      <div class="skill"><i class="fas fa-calculator"></i>
-        <p><strong>Quantitative Aptitude</strong><br>Strong command over numbers and problem-solving, built through rigorous practice and competitive prep.</p>
+    <div class="skills-grid">
+      <div class="skill-card">
+        <i class="fas fa-brain"></i>
+        <h3>Adaptability</h3>
+        <p>Capable of handling any challenge using digital tools like Google and ChatGPT — self-starter and fast-learner.</p>
       </div>
-      <div class="skill"><i class="fas fa-users"></i>
-        <p><strong>Team Problem Solving</strong><br>Capable of navigating complex group challenges with calm and strategic focus.</p>
+      <div class="skill-card">
+        <i class="fas fa-chart-line"></i>
+        <h3>Business Trends</h3>
+        <p>Keeping pace with global business shifts, innovation patterns, and modern consumer behavior.</p>
       </div>
-      <div class="skill"><i class="fas fa-user-tie"></i>
-        <p><strong>Group Leadership</strong><br>Led multiple student-led projects, balancing team morale, timelines, and impact.</p>
+      <div class="skill-card">
+        <i class="fas fa-globe"></i>
+        <h3>International Relations</h3>
+        <p>Harvard HPAIR 2026 participant with exposure to multi-national policy thinking and diplomacy.</p>
       </div>
-      <div class="skill"><i class="fas fa-globe"></i>
-        <p><strong>International Relations</strong><br>Selected for HPAIR 2026 at Harvard, with a knack for diplomacy, diversity and global affairs.</p>
+      <div class="skill-card">
+        <i class="fas fa-magnifying-glass-chart"></i>
+        <h3>SEO</h3>
+        <p>Technical understanding of on-page/off-page SEO and optimization of web content.</p>
       </div>
-      <div class="skill"><i class="fas fa-chart-line"></i>
-        <p><strong>Business Trends</strong><br>Continuously tracking business innovations, market shifts and consumer insights to stay ahead.</p>
+      <div class="skill-card">
+        <i class="fas fa-calculator"></i>
+        <h3>Quantitative Aptitude</h3>
+        <p>Solid problem-solving mindset with attention to numerical accuracy and logical reasoning.</p>
       </div>
-      <div class="skill"><i class="fas fa-magnifying-glass-chart"></i>
-        <p><strong>SEO</strong><br>Hands-on experience with search optimization tools to increase reach and traffic across web platforms.</p>
-      </div>
-      <div class="skill"><i class="fas fa-brain"></i>
-        <p><strong>Adaptability</strong><br>Will accomplish anything without prior info too. Google and ChatGPT are my best friends.</p>
+      <div class="skill-card">
+        <i class="fas fa-users"></i>
+        <h3>Team Problem Solving</h3>
+        <p>Worked within teams to tackle multi-faceted case studies and management simulations.</p>
       </div>
     </div>
   </section>
 
   <section id="contact">
-    <div class="contact-btn">
-      <button onclick="document.getElementById('formbox').style.display='block'; document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });">Let’s Work Together</button>
-    </div>
-    <div class="contact-form" id="formbox">
-      <form action="https://formspree.io/f/xzzgopel" method="POST">
-        <input type="text" name="name" placeholder="Your Name" required><br>
-        <input type="email" name="email" placeholder="Your Email" required><br>
-        <textarea name="message" rows="4" placeholder="Your Message"></textarea><br>
-        <button type="submit">Send</button>
-      </form>
+    <h2>Let’s Work Together</h2>
+    <p style="text-align:center; margin-top: 1rem;">Reach out for collaborations, opportunities, or consulting gigs.</p>
+    <div class="social-icons">
+      <a href="mailto:ayaan15ch@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
     </div>
   </section>
 
   <footer>
-    &copy; Ayaan Chaudhary 2025 | All rights reserved by Indian Copyright Laws
+    &copy; Ayaan Chaudhary 2025 | All rights reserved under Indian Copyright Laws
   </footer>
 </body>
+
 </html>
+
 
 
 
