@@ -17,34 +17,32 @@
     }
 
     body {
-      background-color: #f5f7fa;
+      background: linear-gradient(135deg, #f2f6f9, #dbe9f1);
       color: #1e1e1e;
     }
 
     header {
-      padding: 5rem 2rem 3rem;
-      background: white;
+      padding: 6rem 2rem 4rem;
+      background: #ffffff;
       text-align: center;
       border-bottom: 1px solid #e0e0e0;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
     }
 
     .hero-title {
-      font-size: 2.8rem;
-      font-weight: 700;
-      animation: slideInDown 1s ease-out;
+      font-size: 3rem;
+      font-weight: 800;
     }
 
     .hero-sub {
-      font-size: 1.3rem;
-      color: #0077b6;
-      margin-top: 0.5rem;
-      animation: slideInUp 1.2s ease-out;
+      font-size: 1.4rem;
+      color: #005b96;
+      margin-top: 0.6rem;
     }
 
     nav {
       display: flex;
       justify-content: center;
-      flex-wrap: wrap;
       gap: 2rem;
       background-color: #ffffff;
       padding: 1rem;
@@ -57,29 +55,28 @@
     nav a {
       text-decoration: none;
       color: #222;
-      font-weight: 500;
+      font-weight: 600;
       transition: color 0.3s;
     }
 
     nav a:hover {
-      color: #0077b6;
+      color: #005b96;
     }
 
     section {
       max-width: 1000px;
       margin: auto;
-      padding: 3rem 2rem;
-      animation: fadeInUp 1s ease;
+      padding: 4rem 2rem;
     }
 
     h2 {
-      font-size: 2rem;
-      margin-bottom: 1.2rem;
-      color: #0077b6;
+      font-size: 2.2rem;
+      margin-bottom: 1.5rem;
+      color: #005b96;
     }
 
     p {
-      line-height: 1.7;
+      line-height: 1.8;
       font-size: 1.05rem;
       color: #333;
     }
@@ -92,52 +89,52 @@
     }
 
     .social-icons a {
-      font-size: 1.5rem;
+      font-size: 1.6rem;
       color: #222;
       transition: color 0.3s;
     }
 
     .social-icons a:hover {
-      color: #0077b6;
+      color: #005b96;
     }
 
     .skills-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 2rem;
       margin-top: 2rem;
     }
 
     .skill-card {
-      background: #ffffff;
-      border-radius: 10px;
+      background: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(6px);
+      border-radius: 12px;
       padding: 1.5rem;
-      box-shadow: 0 0 10px rgba(0,0,0,0.05);
-      transition: transform 0.3s, background 0.3s;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease;
     }
 
     .skill-card:hover {
       transform: translateY(-5px);
-      background: #f0f8ff;
     }
 
     .skill-card i {
       font-size: 1.8rem;
-      color: #0077b6;
-      margin-bottom: 0.5rem;
+      color: #005b96;
+      margin-bottom: 0.6rem;
     }
 
     .education-entry {
       background: #ffffff;
       padding: 1.5rem;
       margin-bottom: 1rem;
-      border-radius: 8px;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
     }
 
     .education-entry h3 {
       font-size: 1.2rem;
-      color: #0077b6;
+      color: #005b96;
       margin-bottom: 0.3rem;
     }
 
@@ -155,7 +152,7 @@
     .reveal-btn {
       padding: 1rem 2rem;
       font-size: 1.1rem;
-      background: #0077b6;
+      background: #005b96;
       color: white;
       border: none;
       border-radius: 6px;
@@ -170,7 +167,6 @@
     .contact-form {
       display: none;
       margin-top: 2rem;
-      animation: fadeInUp 0.7s ease;
     }
 
     .contact-form input,
@@ -184,7 +180,7 @@
 
     .contact-form button {
       padding: 0.8rem 1.5rem;
-      background: #0077b6;
+      background: #005b96;
       color: white;
       border: none;
       border-radius: 6px;
@@ -204,7 +200,7 @@
       position: fixed;
       bottom: 30px;
       right: 30px;
-      background-color: #0077b6;
+      background-color: #005b96;
       color: #fff;
       padding: 1rem 1.5rem;
       border-radius: 8px;
@@ -221,7 +217,7 @@
 </head>
 
 <body>
-  <div id="toast" class="toast">Welcome to the official website of Ayaan Chaudhary 🚀</div>
+  <div id="toast" class="toast">Let’s talk solutions, let’s talk consulting — Welcome to Ayaan’s digital base.</div>
 
   <header>
     <h1 class="hero-title">Ayaan Chaudhary</h1>
@@ -237,7 +233,7 @@
 
   <section id="about">
     <h2>About Me</h2>
-    <p>I’m a BMS student at Delhi University with a deep interest in consulting, international business, and analytics. My mindset is entrepreneurial, adaptable, and laser-focused on strategy and impact. Selected for HPAIR 2026, I aim to lead projects that create real-world transformation through sharp business acumen and collaborative vision.</p>
+    <p>I’m a BMS student at Delhi University with a deep interest in consulting, international business, and strategy. With an analytical approach, I break down problems into actionable solutions. Selected for HPAIR 2026, I aspire to craft high-impact frameworks and lead transformative conversations in the world of business.</p>
     <div class="social-icons">
       <a href="https://www.linkedin.com/in/ayaan-chaudhary-972ba5281" target="_blank"><i class="fab fa-linkedin"></i></a>
       <a href="https://wa.me/9315087976" target="_blank"><i class="fab fa-whatsapp"></i></a>
@@ -264,13 +260,15 @@
   <section id="skills">
     <h2>Skills</h2>
     <div class="skills-grid">
-      <div class="skill-card"><i class="fas fa-calculator"></i><p><strong>Quantitative Aptitude</strong><br>Rigorous prep has shaped a solid grip over numbers and time-based problem solving.</p></div>
-      <div class="skill-card"><i class="fas fa-users"></i><p><strong>Team Problem Solving</strong><br>Well-versed in real-time brainstorming, adaptability, and resolving group challenges.</p></div>
-      <div class="skill-card"><i class="fas fa-user-tie"></i><p><strong>Group Leadership</strong><br>Proven leadership in student-run projects and organizing national-level competitions.</p></div>
-      <div class="skill-card"><i class="fas fa-globe"></i><p><strong>International Relations</strong><br>Selected for HPAIR 2026; passionate about geopolitics, diplomacy, and public policy.</p></div>
-      <div class="skill-card"><i class="fas fa-chart-line"></i><p><strong>Business Trends</strong><br>Track industry shifts and innovation curves to guide decision-making processes.</p></div>
-      <div class="skill-card"><i class="fas fa-magnifying-glass-chart"></i><p><strong>SEO</strong><br>Skilled in driving digital engagement through advanced SEO strategies and content management.</p></div>
-      <div class="skill-card"><i class="fas fa-brain"></i><p><strong>Adaptability</strong><br>Can take on new challenges with zero prior info. Google + ChatGPT = my toolset.</p></div>
+      <div class="skill-card"><i class="fas fa-calculator"></i><p><strong>Quantitative Aptitude</strong><br>Rigorous prep has built a confident, fast-paced problem-solving ability.</p></div>
+      <div class="skill-card"><i class="fas fa-users"></i><p><strong>Team Problem Solving</strong><br>Known for composure and creativity in team-based problem-solving sprints.</p></div>
+      <div class="skill-card"><i class="fas fa-user-tie"></i><p><strong>Group Leadership</strong><br>Capable of rallying teams with high energy and focused direction.</p></div>
+      <div class="skill-card"><i class="fas fa-globe"></i><p><strong>International Relations</strong><br>Selected for HPAIR 2026; global mindset meets critical policy thinking.</p></div>
+      <div class="skill-card"><i class="fas fa-chart-line"></i><p><strong>Business Trends</strong><br>Analytical radar tuned to detect early business shifts and patterns.</p></div>
+      <div class="skill-card"><i class="fas fa-magnifying-glass-chart"></i><p><strong>SEO</strong><br>Hands-on experience in growing digital visibility and reach through SEO tools.</p></div>
+      <div class="skill-card"><i class="fas fa-brain"></i><p><strong>Adaptability</strong><br>Can excel in unknown scenarios. Google and ChatGPT are my best collaborators.</p></div>
+      <div class="skill-card"><i class="fas fa-lightbulb"></i><p><strong>Critical Thinking</strong><br>Structured, clear thinking under pressure. Breaks down complex challenges fast.</p></div>
+      <div class="skill-card"><i class="fas fa-chalkboard-teacher"></i><p><strong>Presentation Skills</strong><br>Deliver strategic pitches and reports with precision and impact.</p></div>
     </div>
   </section>
 
