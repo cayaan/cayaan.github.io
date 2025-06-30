@@ -5,40 +5,36 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ayaan Chaudhary – Consulting Enthusiast</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: 'Inter', sans-serif;
       scroll-behavior: smooth;
+      font-family: 'Inter', sans-serif;
     }
 
     body {
-      background-color: #f8f9fa;
-      color: #222;
+      background-color: #f5f7fa;
+      color: #1e1e1e;
     }
 
     header {
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding: 2rem;
+      padding: 5rem 2rem 3rem;
       background: white;
+      text-align: center;
+      border-bottom: 1px solid #e0e0e0;
     }
 
     .hero-title {
-      font-size: 3rem;
-      font-weight: 700;
+      font-size: 2.5rem;
+      font-weight: 800;
     }
 
     .hero-sub {
-      font-size: 1.5rem;
+      font-size: 1.2rem;
       color: #0077b6;
       margin-top: 0.5rem;
     }
@@ -46,18 +42,19 @@
     nav {
       display: flex;
       justify-content: center;
+      flex-wrap: wrap;
       gap: 2rem;
-      padding: 1rem 0;
       background-color: #ffffff;
+      padding: 1rem;
       position: sticky;
       top: 0;
       z-index: 10;
-      border-bottom: 1px solid #eee;
+      border-bottom: 1px solid #ddd;
     }
 
     nav a {
       text-decoration: none;
-      color: #333;
+      color: #222;
       font-weight: 500;
       transition: color 0.3s;
     }
@@ -67,29 +64,28 @@
     }
 
     section {
-      max-width: 900px;
-      margin: 4rem auto;
-      padding: 0 1.5rem;
+      max-width: 1000px;
+      margin: auto;
+      padding: 3rem 2rem;
     }
 
     h2 {
       font-size: 2rem;
-      margin-bottom: 1rem;
-      border-left: 4px solid #0077b6;
-      padding-left: 0.5rem;
+      margin-bottom: 1.2rem;
+      color: #0077b6;
     }
 
-    .about p {
-      font-size: 1.1rem;
-      line-height: 1.8;
-      color: #444;
+    p {
+      line-height: 1.7;
+      font-size: 1.05rem;
+      color: #333;
     }
 
     .social-icons {
       display: flex;
       justify-content: center;
       gap: 1.5rem;
-      margin-top: 1rem;
+      margin-top: 1.5rem;
     }
 
     .social-icons a {
@@ -110,16 +106,15 @@
     }
 
     .skill-card {
-      background: #fff;
-      border: 1px solid #e0e0e0;
+      background: #ffffff;
       border-radius: 10px;
       padding: 1.5rem;
-      transition: all 0.3s;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+      transition: transform 0.3s;
     }
 
     .skill-card:hover {
       transform: translateY(-5px);
-      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05);
     }
 
     .skill-card i {
@@ -128,13 +123,33 @@
       margin-bottom: 0.5rem;
     }
 
+    .education-entry {
+      background: #ffffff;
+      padding: 1.5rem;
+      margin-bottom: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+    }
+
+    .education-entry h3 {
+      font-size: 1.2rem;
+      color: #0077b6;
+      margin-bottom: 0.3rem;
+    }
+
+    .education-entry span {
+      display: block;
+      color: #666;
+      font-size: 0.95rem;
+    }
+
     footer {
       text-align: center;
       padding: 2rem;
-      background: #fff;
+      background: #ffffff;
       font-size: 0.9rem;
-      color: #666;
-      border-top: 1px solid #eee;
+      color: #777;
+      border-top: 1px solid #eaeaea;
     }
   </style>
 </head>
@@ -147,17 +162,34 @@
 
   <nav>
     <a href="#about">About</a>
+    <a href="#education">Education</a>
     <a href="#skills">Skills</a>
     <a href="#contact">Contact</a>
   </nav>
 
-  <section id="about" class="about">
+  <section id="about">
     <h2>About Me</h2>
-    <p>I am a BMS (Bachelor of Management Studies) student at Delhi University, passionate about business strategy and global consulting. With a sharp focus on analytical thinking and trend forecasting, I aim to create real impact in strategic decision-making roles. I believe in solving high-stake problems with minimal noise and maximum clarity.</p>
+    <p>I am a BMS (Bachelor of Management Studies) student at Delhi University, deeply passionate about consulting, strategic analysis, and international affairs. I thrive in high-stakes environments and pride myself on solving problems with sharp insight, minimal fluff, and an always-learning mindset. I’ve been selected for HPAIR at Harvard in 2026, and actively follow global economic trends and cross-cultural dialogue. I believe the right strategy can change everything.</p>
     <div class="social-icons">
       <a href="https://www.linkedin.com/in/ayaan-chaudhary-972ba5281" target="_blank"><i class="fab fa-linkedin"></i></a>
       <a href="https://wa.me/9315087976" target="_blank"><i class="fab fa-whatsapp"></i></a>
       <a href="mailto:ayaan15ch@gmail.com"><i class="fas fa-envelope"></i></a>
+    </div>
+  </section>
+
+  <section id="education">
+    <h2>Education</h2>
+    <div class="education-entry">
+      <h3>Bachelor of Management Studies (BMS)</h3>
+      <span>Delhi University | 2025 – 2028</span>
+    </div>
+    <div class="education-entry">
+      <h3>Class 12th (CBSE) – Commerce + Mathematics</h3>
+      <span>St. Paul’s School, Hauz Khas | 2024</span>
+    </div>
+    <div class="education-entry">
+      <h3>Class 10th (CBSE)</h3>
+      <span>St. Paul’s School, Hauz Khas | 2022</span>
     </div>
   </section>
 
@@ -167,39 +199,39 @@
       <div class="skill-card">
         <i class="fas fa-brain"></i>
         <h3>Adaptability</h3>
-        <p>Capable of handling any challenge using digital tools like Google and ChatGPT — self-starter and fast-learner.</p>
+        <p>Can work on anything—even without prior experience—by relying on my resourcefulness, speed, and tools like ChatGPT and Google.</p>
       </div>
       <div class="skill-card">
         <i class="fas fa-chart-line"></i>
         <h3>Business Trends</h3>
-        <p>Keeping pace with global business shifts, innovation patterns, and modern consumer behavior.</p>
+        <p>Stay sharp with global economic insights, startups, and innovation, always adapting to future-ready knowledge.</p>
       </div>
       <div class="skill-card">
         <i class="fas fa-globe"></i>
         <h3>International Relations</h3>
-        <p>Harvard HPAIR 2026 participant with exposure to multi-national policy thinking and diplomacy.</p>
+        <p>Harvard HPAIR 2026 participant with strong interest in diplomacy, international trade, and multilateral engagement.</p>
       </div>
       <div class="skill-card">
         <i class="fas fa-magnifying-glass-chart"></i>
         <h3>SEO</h3>
-        <p>Technical understanding of on-page/off-page SEO and optimization of web content.</p>
+        <p>Skilled in boosting digital presence using on-page and off-page optimization strategies for search visibility.</p>
       </div>
       <div class="skill-card">
         <i class="fas fa-calculator"></i>
         <h3>Quantitative Aptitude</h3>
-        <p>Solid problem-solving mindset with attention to numerical accuracy and logical reasoning.</p>
+        <p>Comfortable with numbers, data sets, and mathematical logic—built over time through problem-solving and practice.</p>
       </div>
       <div class="skill-card">
         <i class="fas fa-users"></i>
         <h3>Team Problem Solving</h3>
-        <p>Worked within teams to tackle multi-faceted case studies and management simulations.</p>
+        <p>Have worked across teams to solve business problems, ensuring collaboration, clarity, and creativity.</p>
       </div>
     </div>
   </section>
 
   <section id="contact">
     <h2>Let’s Work Together</h2>
-    <p style="text-align:center; margin-top: 1rem;">Reach out for collaborations, opportunities, or consulting gigs.</p>
+    <p style="text-align:center;">Feel free to connect for consulting projects, collaborations, or growth opportunities.</p>
     <div class="social-icons">
       <a href="mailto:ayaan15ch@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
     </div>
@@ -211,7 +243,5 @@
 </body>
 
 </html>
-
-
 
 
