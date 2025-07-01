@@ -1,94 +1,283 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ayaan Chaudhary – Consulting</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <style>
     * {
       margin: 0;
       padding: 0;
       scroll-behavior: smooth;
       box-sizing: border-box;
-      font-family: 'Poppins', sans-serif;
+      font-family: 'Inter', sans-serif;
     }
+
     body {
-      background: linear-gradient(to right, #f4f7f9, #e9f6fc);
-      color: #222;
+      background: white;
+      color: #333;
     }
+
     header {
-      height: 50vh;
+      height: 90vh;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       text-align: center;
-      background: url('https://images.unsplash.com/photo-1557683304-673a23048d34') no-repeat center center/cover;
+      background: linear-gradient(to right, #dff1ff, #f7fcff);
     }
+
     .name {
-      font-size: 2.5rem;
+      font-size: 3rem;
       font-weight: 600;
-      color: #000;
-      background-color: rgba(255, 255, 255, 0.6);
-      padding: 0.4rem 1.2rem;
-      border-radius: 10px;
-      animation: fadeInDown 1.5s ease-out;
+      color: #333;
+      margin-bottom: 1rem;
     }
-    .typed-tag {
-      margin-top: 1rem;
-      font-size: 1.2rem;
-      color: #007acc;
-      background-color: rgba(255, 255, 255, 0.5);
-      padding: 0.4rem 1rem;
-      border-radius: 8px;
+
+    .typing {
+      font-size: 1.5rem;
+      color: #008cff;
+      font-weight: 500;
+      border-right: 2px solid #008cff;
+      white-space: nowrap;
+      overflow: hidden;
+      animation: typing 3s steps(30, end), blink 0.5s step-end infinite;
     }
-    @keyframes fadeInDown {
-      from {
-        opacity: 0;
-        transform: translateY(-30px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
     }
+
+    @keyframes blink {
+      from, to { border-color: transparent }
+      50% { border-color: #008cff; }
+    }
+
     nav {
       display: flex;
       justify-content: center;
-      gap: 2rem;
+      gap: 3rem;
       background-color: #fff;
       padding: 1rem;
       position: sticky;
       top: 0;
       z-index: 10;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+      border-bottom: 1px solid #eee;
     }
+
     nav a {
-      color: #007acc;
+      color: #333;
       text-decoration: none;
       font-weight: 600;
       transition: color 0.3s ease;
     }
+
     nav a:hover {
-      color: #00b3e6;
+      color: #008cff;
+    }
+
+    section {
+      padding: 4rem 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      color: #222;
+    }
+
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .social-icons a {
+      color: #333;
+      font-size: 1.8rem;
+      transition: transform 0.2s;
+    }
+
+    .social-icons a:hover {
+      transform: scale(1.2);
+    }
+
+    .skills,
+    .education-boxes {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .skill,
+    .edu-box {
+      background: #f9f9f9;
+      padding: 1rem;
+      border-radius: 12px;
+      transition: all 0.3s ease-in-out;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    .skill:hover,
+    .edu-box:hover {
+      background: #e6f5ff;
+      transform: scale(1.03);
+    }
+
+    .skill i {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+      color: #008cff;
+    }
+
+    .contact-btn {
+      display: flex;
+      justify-content: center;
+      margin-top: 3rem;
+    }
+
+    .contact-btn button {
+      padding: 1rem 2rem;
+      border: none;
+      background: #008cff;
+      color: white;
+      font-weight: 700;
+      font-size: 1.1rem;
+      cursor: pointer;
+      border-radius: 8px;
+      transition: transform 0.3s;
+    }
+
+    .contact-btn button:hover {
+      transform: scale(1.05);
+    }
+
+    .contact-form {
+      display: none;
+      margin-top: 2rem;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 0.8rem;
+      margin-bottom: 1rem;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      outline: none;
+    }
+
+    .contact-form button {
+      padding: 0.8rem 1.5rem;
+      background: #008cff;
+      color: white;
+      font-weight: bold;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      background-color: #f1f1f1;
+      color: #333;
+      margin-top: 3rem;
     }
   </style>
 </head>
+
 <body>
   <header>
-    <h1 class="name">Ayaan Chaudhary</h1>
-    <div class="typed-tag" id="typed-text"></div>
+    <div class="name">Ayaan Chaudhary</div>
+    <div class="typing">Consulting Enthusiast</div>
   </header>
-  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-  <script>
-    var typed = new Typed("#typed-text", {
-      strings: ["Consulting Enthusiast"],
-      typeSpeed: 60,
-      backSpeed: 30,
-      loop: false
-    });
-  </script>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#education">Education</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I’m Ayaan Chaudhary, a BMS student from Delhi University and a consulting enthusiast. I specialize in solving real-world business problems with sharp strategy, high adaptability, and collaborative spirit. I thrive in data-driven environments and I'm always curious to learn more.</p>
+    <div class="social-icons">
+      <a href="https://www.linkedin.com/in/ayaan-chaudhary-972ba5281" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://wa.me/9315087976" target="_blank"><i class="fab fa-whatsapp"></i></a>
+      <a href="mailto:ayaan15ch@gmail.com"><i class="fas fa-envelope"></i></a>
+    </div>
+  </section>
+
+  <section id="education">
+    <h2>Education</h2>
+    <div class="education-boxes">
+      <div class="edu-box">
+        <strong>BMS – Bachelor of Management Studies</strong><br>
+        Delhi University | 2025 – 2028
+      </div>
+      <div class="edu-box">
+        <strong>Class 12 (CBSE)</strong><br>
+        St. Paul’s School, Hauz Khas | 2024 | Commerce + Math | Grade: A
+      </div>
+      <div class="edu-box">
+        <strong>Class 10 (CBSE)</strong><br>
+        St. Paul’s School, Hauz Khas | 2022 | Grade: A
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills">
+      <div class="skill"><i class="fas fa-lightbulb"></i>
+        <p><strong>Critical Thinking</strong><br>Capable of analyzing problems deeply and finding structured solutions under pressure.</p>
+      </div>
+      <div class="skill"><i class="fas fa-globe"></i>
+        <p><strong>Global Awareness</strong><br>Selected for HPAIR 2026 at Harvard, interested in diplomacy, business, and world affairs.</p>
+      </div>
+      <div class="skill"><i class="fas fa-brain"></i>
+        <p><strong>Adaptability</strong><br>Can solve problems without prior knowledge. Google and ChatGPT are my best friends.</p>
+      </div>
+      <div class="skill"><i class="fas fa-users"></i>
+        <p><strong>Teamwork</strong><br>Works effectively in teams to solve challenging tasks and bring ideas to life.</p>
+      </div>
+      <div class="skill"><i class="fas fa-chart-line"></i>
+        <p><strong>Business Trends</strong><br>Well-versed in market shifts and economic forecasting. Strong interest in business strategy.</p>
+      </div>
+      <div class="skill"><i class="fas fa-user-tie"></i>
+        <p><strong>Presentation</strong><br>Skilled in building and delivering high-impact PowerPoint decks.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="contact-btn">
+      <button onclick="document.getElementById('formbox').style.display='block'; document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });">Let’s Work Together</button>
+    </div>
+    <div class="contact-form" id="formbox">
+      <form action="https://formspree.io/f/xzzgopel" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required><br>
+        <input type="email" name="email" placeholder="Your Email" required><br>
+        <textarea name="message" rows="4" placeholder="Your Message"></textarea><br>
+        <button type="submit">Send</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    &copy; Ayaan Chaudhary 2025 | All rights reserved by Indian Copyright Laws
+  </footer>
 </body>
 </html>
