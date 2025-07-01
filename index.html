@@ -4,81 +4,66 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ayaan Chaudhary – Consulting</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600&display=swap" rel="stylesheet">
+  <title>Ayaan Chaudhary – Consulting Enthusiast</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <style>
     * {
       margin: 0;
       padding: 0;
-      scroll-behavior: smooth;
       box-sizing: border-box;
-      font-family: 'Inter', sans-serif;
+      scroll-behavior: smooth;
+      font-family: 'Poppins', sans-serif;
     }
 
     body {
-      background: white;
+      background: #ffffff;
       color: #333;
     }
 
     header {
-      height: 90vh;
+      height: 60vh;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       text-align: center;
-      background: linear-gradient(to right, #dff1ff, #f7fcff);
+      padding: 2rem;
     }
 
     .name {
-      font-size: 3rem;
+      font-size: 2.8rem;
       font-weight: 600;
-      color: #333;
-      margin-bottom: 1rem;
+      color: #222;
     }
 
-    .typing {
+    .typing-text {
       font-size: 1.5rem;
-      color: #008cff;
+      color: #007bff;
+      margin-top: 0.5rem;
+      height: 2rem;
       font-weight: 500;
-      border-right: 2px solid #008cff;
-      white-space: nowrap;
-      overflow: hidden;
-      animation: typing 3s steps(30, end), blink 0.5s step-end infinite;
-    }
-
-    @keyframes typing {
-      from { width: 0 }
-      to { width: 100% }
-    }
-
-    @keyframes blink {
-      from, to { border-color: transparent }
-      50% { border-color: #008cff; }
     }
 
     nav {
       display: flex;
       justify-content: center;
-      gap: 3rem;
-      background-color: #fff;
+      gap: 2rem;
+      background-color: #f2f8ff;
       padding: 1rem;
       position: sticky;
       top: 0;
       z-index: 10;
-      border-bottom: 1px solid #eee;
     }
 
     nav a {
-      color: #333;
+      color: #007bff;
       text-decoration: none;
       font-weight: 600;
-      transition: color 0.3s ease;
     }
 
     nav a:hover {
-      color: #008cff;
+      text-decoration: underline;
     }
 
     section {
@@ -87,10 +72,10 @@
       margin: auto;
     }
 
-    h2 {
-      font-size: 2rem;
+    section h2 {
+      color: #007bff;
       margin-bottom: 1.5rem;
-      color: #222;
+      font-size: 2rem;
     }
 
     .social-icons {
@@ -101,64 +86,51 @@
     }
 
     .social-icons a {
-      color: #333;
-      font-size: 1.8rem;
-      transition: transform 0.2s;
+      color: #007bff;
+      font-size: 1.6rem;
     }
 
-    .social-icons a:hover {
-      transform: scale(1.2);
-    }
-
-    .skills,
-    .education-boxes {
+    .education-boxes,
+    .skills {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 2rem;
-      margin-top: 2rem;
     }
 
-    .skill,
-    .edu-box {
-      background: #f9f9f9;
-      padding: 1rem;
+    .edu-box,
+    .skill {
+      background: #f7fbff;
+      padding: 1.2rem;
       border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
       transition: all 0.3s ease-in-out;
-      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
     }
 
-    .skill:hover,
-    .edu-box:hover {
-      background: #e6f5ff;
-      transform: scale(1.03);
+    .edu-box:hover,
+    .skill:hover {
+      background: #eaf4ff;
+      transform: scale(1.02);
     }
 
     .skill i {
-      font-size: 1.5rem;
+      font-size: 1.4rem;
+      color: #007bff;
       margin-bottom: 0.5rem;
-      color: #008cff;
     }
 
     .contact-btn {
-      display: flex;
-      justify-content: center;
+      text-align: center;
       margin-top: 3rem;
     }
 
     .contact-btn button {
       padding: 1rem 2rem;
       border: none;
-      background: #008cff;
+      background: #007bff;
       color: white;
-      font-weight: 700;
-      font-size: 1.1rem;
-      cursor: pointer;
+      font-weight: 600;
       border-radius: 8px;
-      transition: transform 0.3s;
-    }
-
-    .contact-btn button:hover {
-      transform: scale(1.05);
+      cursor: pointer;
     }
 
     .contact-form {
@@ -171,16 +143,14 @@
       width: 100%;
       padding: 0.8rem;
       margin-bottom: 1rem;
-      border-radius: 6px;
       border: 1px solid #ccc;
-      outline: none;
+      border-radius: 6px;
     }
 
     .contact-form button {
       padding: 0.8rem 1.5rem;
-      background: #008cff;
+      background: #007bff;
       color: white;
-      font-weight: bold;
       border: none;
       border-radius: 6px;
       cursor: pointer;
@@ -188,23 +158,23 @@
 
     footer {
       text-align: center;
-      padding: 1rem;
-      font-size: 0.9rem;
-      background-color: #f1f1f1;
-      color: #333;
+      padding: 1.5rem;
+      background: #f2f2f2;
+      color: #444;
       margin-top: 3rem;
+      font-size: 0.9rem;
     }
   </style>
 </head>
 
 <body>
   <header>
-    <div class="name">Ayaan Chaudhary</div>
-    <div class="typing">Consulting Enthusiast</div>
+    <h1 class="name">Ayaan Chaudhary</h1>
+    <div class="typing-text" id="typed-text"></div>
   </header>
 
   <nav>
-    <a href="#about">About</a>
+    <a href="#about">About Me</a>
     <a href="#education">Education</a>
     <a href="#skills">Skills</a>
     <a href="#contact">Contact</a>
@@ -212,7 +182,7 @@
 
   <section id="about">
     <h2>About Me</h2>
-    <p>I’m Ayaan Chaudhary, a BMS student from Delhi University and a consulting enthusiast. I specialize in solving real-world business problems with sharp strategy, high adaptability, and collaborative spirit. I thrive in data-driven environments and I'm always curious to learn more.</p>
+    <p>I’m a BMS student at Delhi University and a consulting enthusiast who thrives on solving real-world problems with strategic thinking and data-driven analysis. I'm driven, adaptable, and committed to excellence in every challenge.</p>
     <div class="social-icons">
       <a href="https://www.linkedin.com/in/ayaan-chaudhary-972ba5281" target="_blank"><i class="fab fa-linkedin"></i></a>
       <a href="https://wa.me/9315087976" target="_blank"><i class="fab fa-whatsapp"></i></a>
@@ -224,16 +194,16 @@
     <h2>Education</h2>
     <div class="education-boxes">
       <div class="edu-box">
-        <strong>BMS – Bachelor of Management Studies</strong><br>
+        <strong>Bachelor of Management Studies (BMS)</strong><br>
         Delhi University | 2025 – 2028
       </div>
       <div class="edu-box">
         <strong>Class 12 (CBSE)</strong><br>
-        St. Paul’s School, Hauz Khas | 2024 | Commerce + Math | Grade: A
+        St. Paul’s School, Hauz Khas | 2024 | Commerce + Math
       </div>
       <div class="edu-box">
         <strong>Class 10 (CBSE)</strong><br>
-        St. Paul’s School, Hauz Khas | 2022 | Grade: A
+        St. Paul’s School, Hauz Khas | 2022
       </div>
     </div>
   </section>
@@ -241,23 +211,32 @@
   <section id="skills">
     <h2>Skills</h2>
     <div class="skills">
-      <div class="skill"><i class="fas fa-lightbulb"></i>
-        <p><strong>Critical Thinking</strong><br>Capable of analyzing problems deeply and finding structured solutions under pressure.</p>
-      </div>
-      <div class="skill"><i class="fas fa-globe"></i>
-        <p><strong>Global Awareness</strong><br>Selected for HPAIR 2026 at Harvard, interested in diplomacy, business, and world affairs.</p>
-      </div>
-      <div class="skill"><i class="fas fa-brain"></i>
-        <p><strong>Adaptability</strong><br>Can solve problems without prior knowledge. Google and ChatGPT are my best friends.</p>
+      <div class="skill"><i class="fas fa-calculator"></i>
+        <p><strong>Quantitative Aptitude</strong><br>Mastery over numerical problem-solving with speed and accuracy.</p>
       </div>
       <div class="skill"><i class="fas fa-users"></i>
-        <p><strong>Teamwork</strong><br>Works effectively in teams to solve challenging tasks and bring ideas to life.</p>
-      </div>
-      <div class="skill"><i class="fas fa-chart-line"></i>
-        <p><strong>Business Trends</strong><br>Well-versed in market shifts and economic forecasting. Strong interest in business strategy.</p>
+        <p><strong>Team Problem Solving</strong><br>Efficient in collaborative thinking and driving group results.</p>
       </div>
       <div class="skill"><i class="fas fa-user-tie"></i>
-        <p><strong>Presentation</strong><br>Skilled in building and delivering high-impact PowerPoint decks.</p>
+        <p><strong>Group Leadership</strong><br>Natural leader with strong organizational and people management skills.</p>
+      </div>
+      <div class="skill"><i class="fas fa-globe"></i>
+        <p><strong>International Relations</strong><br>Selected for HPAIR 2026 at Harvard, a global thinker and connector.</p>
+      </div>
+      <div class="skill"><i class="fas fa-chart-line"></i>
+        <p><strong>Business Trends</strong><br>Fluent in decoding market shifts and business analytics.</p>
+      </div>
+      <div class="skill"><i class="fas fa-magnifying-glass-chart"></i>
+        <p><strong>SEO</strong><br>Skilled in content optimization, keyword analysis and organic growth strategies.</p>
+      </div>
+      <div class="skill"><i class="fas fa-brain"></i>
+        <p><strong>Adaptability</strong><br>Can conquer new challenges without prior knowledge — with ChatGPT & Google.</p>
+      </div>
+      <div class="skill"><i class="fas fa-lightbulb"></i>
+        <p><strong>Critical Thinking</strong><br>Sharp logical reasoning and structured problem analysis.</p>
+      </div>
+      <div class="skill"><i class="fas fa-chalkboard-teacher"></i>
+        <p><strong>Presentation Skills</strong><br>Craft and deliver crisp, persuasive business presentations.</p>
       </div>
     </div>
   </section>
@@ -279,5 +258,28 @@
   <footer>
     &copy; Ayaan Chaudhary 2025 | All rights reserved by Indian Copyright Laws
   </footer>
+
+  <script>
+    const texts = ["Consulting Enthusiast", "Keen to solve business problems", "Driven by analytics & strategy"];
+    let count = 0;
+    let index = 0;
+    let currentText = '';
+    let letter = '';
+
+    (function type() {
+      if (count === texts.length) count = 0;
+      currentText = texts[count];
+      letter = currentText.slice(0, ++index);
+      document.getElementById('typed-text').textContent = letter;
+      if (letter.length === currentText.length) {
+        count++;
+        index = 0;
+        setTimeout(type, 1500);
+      } else {
+        setTimeout(type, 100);
+      }
+    })();
+  </script>
 </body>
+
 </html>
