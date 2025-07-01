@@ -19,7 +19,7 @@
       color: #222;
     }
     header {
-      height: 60vh;
+      height: 50vh;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -28,21 +28,31 @@
       background: url('https://images.unsplash.com/photo-1557683304-673a23048d34') no-repeat center center/cover;
     }
     .name {
-      font-size: 2.8rem;
+      font-size: 2.5rem;
       font-weight: 600;
-      color: #fff;
-      background-color: rgba(0, 0, 0, 0.5);
+      color: #000;
+      background-color: rgba(255, 255, 255, 0.6);
       padding: 0.4rem 1.2rem;
       border-radius: 10px;
+      animation: fadeInDown 1.5s ease-out;
     }
-    .tag {
-      font-size: 1.5rem;
-      font-weight: 500;
+    .typed-tag {
+      margin-top: 1rem;
+      font-size: 1.2rem;
       color: #007acc;
-      margin-top: 0.5rem;
-      background-color: rgba(255, 255, 255, 0.2);
-      padding: 0.3rem 0.8rem;
+      background-color: rgba(255, 255, 255, 0.5);
+      padding: 0.4rem 1rem;
       border-radius: 8px;
+    }
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
     nav {
       display: flex;
@@ -64,187 +74,21 @@
     nav a:hover {
       color: #00b3e6;
     }
-    section {
-      padding: 4rem 2rem;
-      max-width: 1000px;
-      margin: auto;
-    }
-    .social-icons {
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
-      margin-top: 1rem;
-    }
-    .social-icons a {
-      color: #007acc;
-      font-size: 1.8rem;
-      transition: transform 0.2s;
-    }
-    .social-icons a:hover {
-      transform: scale(1.2);
-    }
-    .skills, .education-boxes {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 2rem;
-      margin-top: 2rem;
-    }
-    .skill, .edu-box {
-      background: #fff;
-      padding: 1rem;
-      border-radius: 12px;
-      transition: all 0.3s ease-in-out;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-    }
-    .skill:hover, .edu-box:hover {
-      background: #e6f7ff;
-      transform: scale(1.03);
-    }
-    .skill i {
-      font-size: 1.5rem;
-      margin-bottom: 0.5rem;
-      color: #00aaff;
-    }
-    .contact-btn {
-      display: flex;
-      justify-content: center;
-      margin-top: 3rem;
-    }
-    .contact-btn button {
-      padding: 1rem 2rem;
-      border: none;
-      background: #00c8ff;
-      color: white;
-      font-weight: 700;
-      font-size: 1.1rem;
-      cursor: pointer;
-      border-radius: 8px;
-      transition: transform 0.3s;
-    }
-    .contact-btn button:hover {
-      transform: scale(1.05);
-    }
-    .contact-form {
-      display: none;
-      margin-top: 2rem;
-    }
-    .contact-form input, .contact-form textarea {
-      width: 100%;
-      padding: 0.8rem;
-      margin-bottom: 1rem;
-      border-radius: 6px;
-      border: none;
-      outline: none;
-    }
-    .contact-form button {
-      padding: 0.8rem 1.5rem;
-      background: #00c8ff;
-      color: white;
-      font-weight: bold;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-    }
-    footer {
-      text-align: center;
-      padding: 1rem;
-      font-size: 0.9rem;
-      background-color: #f0f8ff;
-      color: #333;
-      margin-top: 3rem;
-    }
   </style>
 </head>
 <body>
   <header>
     <h1 class="name">Ayaan Chaudhary</h1>
-    <p class="tag">Consulting Enthusiast</p>
+    <div class="typed-tag" id="typed-text"></div>
   </header>
-
-  <nav>
-    <a href="#about">About</a>
-    <a href="#education">Education</a>
-    <a href="#skills">Skills</a>
-    <a href="#contact">Contact</a>
-  </nav>
-
-  <section id="about">
-    <h2>About Me</h2>
-    <p>I’m a BMS student at Delhi University with a deep-rooted interest in consulting and business analytics. With a sharp eye for emerging global trends and an analytical mindset, I navigate business problems with strategic clarity. I believe in taking bold initiatives and working in collaborative, high-performance environments to solve real-world problems.</p>
-    <div class="social-icons">
-      <a href="https://www.linkedin.com/in/ayaan-chaudhary-972ba5281" target="_blank"><i class="fab fa-linkedin"></i></a>
-      <a href="https://wa.me/9315087976" target="_blank"><i class="fab fa-whatsapp"></i></a>
-      <a href="mailto:ayaan15ch@gmail.com"><i class="fas fa-envelope"></i></a>
-    </div>
-  </section>
-
-  <section id="education">
-    <h2>Education</h2>
-    <div class="education-boxes">
-      <div class="edu-box">
-        <strong>Bachelor of Management Studies (BMS)</strong><br>
-        Delhi University | 2025 – 2028
-      </div>
-      <div class="edu-box">
-        <strong>Class 12 (CBSE)</strong><br>
-        St. Paul’s School, Hauz Khas | 2024 | Commerce + Math
-      </div>
-      <div class="edu-box">
-        <strong>Class 10 (CBSE)</strong><br>
-        St. Paul’s School, Hauz Khas | 2022
-      </div>
-    </div>
-  </section>
-
-  <section id="skills">
-    <h2>Skills</h2>
-    <div class="skills">
-      <div class="skill"><i class="fas fa-calculator"></i>
-        <p><strong>Quantitative Aptitude</strong><br>Strong command over numbers and problem-solving, built through rigorous practice and competitive prep.</p>
-      </div>
-      <div class="skill"><i class="fas fa-users"></i>
-        <p><strong>Team Problem Solving</strong><br>Capable of navigating complex group challenges with calm and strategic focus.</p>
-      </div>
-      <div class="skill"><i class="fas fa-user-tie"></i>
-        <p><strong>Group Leadership</strong><br>Led multiple student-led projects, balancing team morale, timelines, and impact.</p>
-      </div>
-      <div class="skill"><i class="fas fa-globe"></i>
-        <p><strong>International Relations</strong><br>Selected for HPAIR 2026 at Harvard, with a knack for diplomacy, diversity and global affairs.</p>
-      </div>
-      <div class="skill"><i class="fas fa-chart-line"></i>
-        <p><strong>Business Trends</strong><br>Continuously tracking business innovations, market shifts and consumer insights to stay ahead.</p>
-      </div>
-      <div class="skill"><i class="fas fa-magnifying-glass-chart"></i>
-        <p><strong>SEO</strong><br>Hands-on experience with search optimization tools to increase reach and traffic across web platforms.</p>
-      </div>
-      <div class="skill"><i class="fas fa-brain"></i>
-        <p><strong>Adaptability</strong><br>Will accomplish anything without prior info. Google and ChatGPT are my best friends.</p>
-      </div>
-      <div class="skill"><i class="fas fa-lightbulb"></i>
-        <p><strong>Critical Thinking</strong><br>Analyze business situations logically and form effective strategic decisions.</p>
-      </div>
-      <div class="skill"><i class="fas fa-chalkboard-teacher"></i>
-        <p><strong>Presentation Skills</strong><br>Confident public speaker and deck creator for business pitches and team briefings.</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="contact">
-    <div class="contact-btn">
-      <button onclick="document.getElementById('formbox').style.display='block'; document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });">Let’s Work Together</button>
-    </div>
-    <div class="contact-form" id="formbox">
-      <form action="https://formspree.io/f/xzzgopel" method="POST">
-        <input type="text" name="name" placeholder="Your Name" required><br>
-        <input type="email" name="email" placeholder="Your Email" required><br>
-        <textarea name="message" rows="4" placeholder="Your Message"></textarea><br>
-        <button type="submit">Send</button>
-      </form>
-    </div>
-  </section>
-
-  <footer>
-    &copy; Ayaan Chaudhary 2025 | All rights reserved by Indian Copyright Laws
-  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script>
+    var typed = new Typed("#typed-text", {
+      strings: ["Consulting Enthusiast"],
+      typeSpeed: 60,
+      backSpeed: 30,
+      loop: false
+    });
+  </script>
 </body>
 </html>
